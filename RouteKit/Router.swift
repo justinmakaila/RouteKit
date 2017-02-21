@@ -30,6 +30,7 @@ public protocol RouterProvider {
 
 
 open class Router<Route: RouteType>: RouterType {
+    public init() { }
     open func route(to route: Route, source: UIViewController) { }
 }
 
