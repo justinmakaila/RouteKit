@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D0B8B3A31E5BD7300034E231 /* RouteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D0B8B3A11E5BD7300034E231 /* RouteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0B8B3AA1E5BD73B0034E231 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8B3A91E5BD73B0034E231 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0B8B39E1E5BD7300034E231 /* RouteKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RouteKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B8B3A11E5BD7300034E231 /* RouteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouteKit.h; sourceTree = "<group>"; };
 		D0B8B3A21E5BD7300034E231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B8B3A91E5BD73B0034E231 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				D0B8B3A11E5BD7300034E231 /* RouteKit.h */,
 				D0B8B3A21E5BD7300034E231 /* Info.plist */,
+				D0B8B3A91E5BD73B0034E231 /* Router.swift */,
 			);
 			path = RouteKit;
 			sourceTree = "<group>";
@@ -96,6 +99,7 @@
 					D0B8B39D1E5BD7300034E231 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = KMC5HK5ZC7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B8B3AA1E5BD73B0034E231 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +245,7 @@
 		D0B8B3A71E5BD7300034E231 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = KMC5HK5ZC7;
@@ -248,10 +254,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RouteKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinmakaila.RouteKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +267,7 @@
 		D0B8B3A81E5BD7300034E231 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = KMC5HK5ZC7;
@@ -267,6 +276,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RouteKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinmakaila.RouteKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
