@@ -33,7 +33,7 @@ open class Router<Route: RouteType>: RouterType {
     open func route(to route: Route, source: UIViewController) { }
 }
 
-public class ContextualRouter<Route: RouteType, Context>: Router<Route>, ContextualRouterType {
+open class ContextualRouter<Route: RouteType, Context>: Router<Route>, ContextualRouterType {
     public let context: Context
     
     public init(context: Context) {
@@ -54,7 +54,7 @@ public class DynamicRouter<Route: RouteType>: Router<Route> {
     }
 }
 
-class DynamicContextualRouter<Route: RouteType, Context>: ContextualRouter<Route, Context> {
+public class DynamicContextualRouter<Route: RouteType, Context>: ContextualRouter<Route, Context> {
     public let route: (Route, Context, UIViewController) -> ()
     
     public init(context: Context, route: @escaping ((Route, Context, UIViewController) -> ())) {
