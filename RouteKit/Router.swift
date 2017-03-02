@@ -11,9 +11,9 @@ extension String: RouteType { }
 /// to a route of type `Route`.
 public protocol RouterType {
     associatedtype Route: RouteType
-    associatedtype SourceViewController: UIViewController
+    associatedtype Source
     
-    func route(to route: Route, source: SourceViewController)
+    func route(to route: Route, source: Source)
 }
 
 
